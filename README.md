@@ -27,6 +27,10 @@
 <td>Nmap script to scan for vulnerable SMB servers – WARNING: unsafe=1 may cause knockover</td>
 </tr>
 <tr>
+ <td>nmap localhost</td>
+ <td>Displays all the ports that are currently in use</td>
+ </tr>
+ <tr>
 <td>ls /usr/share/nmap/scripts/* | grep ftp</td>
 <td>Search nmap scripts for keywords</td>
 </tr>
