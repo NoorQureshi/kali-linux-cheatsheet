@@ -12,6 +12,8 @@
 <tr>
 <td>nmap -v -sS -A -T4 target</td>
 <td>Nmap verbose scan, runs syn stealth, T4 timing (should be ok on LAN), OS and service version info, traceroute and scripts against services</td>
+ <td>ping sweep sudo nmap -pn taget</td>
+<td>Does a ping sweep over the target's network to see all the available ip's</td>
 </tr>
 <tr>
 <td>nmap -v -sS -p–A -T4 target</td>
