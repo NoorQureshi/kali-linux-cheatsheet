@@ -1632,3 +1632,10 @@ and use a random user agent + database dump</td>
 </tr>
 </tbody>
 </table>
+
+
+MSFVenom Cheatsheet: https://hacktoday.io/t/msfvenom-cheatsheet/3150
+Pentesting Cheatsheets: https://hacktoday.io/t/pentesting-cheatsheets/2635
+SUID Executables - Linux Privilege Escalation Cheatsheet: https://hacktoday.io/t/suid-executables-linux-privilege-escalation-cheatsheet/2865
+Steganography - Cheatsheet: https://hacktoday.io/t/steganography-cheatsheet/2261
+Reverse Shell Cheatsheet: https://hacktoday.io/t/reverse-shell-cheat-sheet/2397
