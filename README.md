@@ -22,15 +22,23 @@
 <td>As above but scans all TCP ports and UDP scan (takes even longer)</td>
 </tr>
 <tr>
+<td>nmap -v -p- -sCV target</td>
+<td>Scans all the ports of the target (tcp) and runs check scripts which detect versions and more information.</td>
+</tr>
+<tr>
 <td>nmap -v -p 445 –script=smb-check-vulns<br>
 –script-args=unsafe=1 192.168.1.X</td>
 <td>Nmap script to scan for vulnerable SMB servers – WARNING: unsafe=1 may cause knockover</td>
 </tr>
 <tr>
- <td>nmap localhost</td>
- <td>Displays all the ports that are currently in use</td>
- </tr>
- <tr>
+<td>nmap -p- localhost</td>
+<td>Displays all the ports that are currently in use (tcp)</td>
+</tr>
+<tr>
+<td>nmap -sn 192.168.1.0/24</td>
+<td>Ping sweeps the network to check what ips respond to ping.</td>
+</tr>
+<tr>
 <td>ls /usr/share/nmap/scripts/* | grep ftp</td>
 <td>Search nmap scripts for keywords</td>
 </tr>
@@ -49,6 +57,14 @@
 <tr>
 <td>nbtscan 192.168.1.0/24</td>
 <td>Discover Windows / Samba servers on subnet, finds Windows MAC addresses, netbios name and discover client workgroup / domain</td>
+</tr>
+<tr>
+<td>smbclient -N -L //target/</td>
+<td>Lists shares for the anonymous user (No auth)</td>
+</tr>
+<tr>
+<td>smbclient -N //target/share</td>
+<td>Connects to a share with the anonymous user (No auth)</td>
 </tr>
 <tr>
 <td>enum4linux -a target-ip</td>
@@ -72,26 +88,6 @@
 </tr>
 </tbody>
 </table>
-<h3>SMB Enumeration</h3>
-<p>Enumerate Windows shares / Samba shares.</p>
-<table>
-<thead>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>nbtscan 192.168.1.0/24</td>
-<td>Discover Windows / Samba servers on subnet, finds Windows MAC addresses, netbios name and discover client workgroup / domain</td>
-</tr>
-<tr>
-<td>enum4linux -a target-ip</td>
-<td>Do Everything, runs all options (find windows client domain / workgroup) apart from dictionary based share name guessing</td>
-</tr>
-</tbody>
-</table>
 <h2>Python Local Web Server</h2>
 <p>Python local web server command, handy for serving up shells and exploits on an attacking machine.</p>
 <table>
@@ -104,7 +100,11 @@
 <tbody>
 <tr>
 <td>python -m SimpleHTTPServer 80</td>
-<td>Run a basic http server, great for serving up shells etc</td>
+<td>Run a basic http server, great for serving up shells etc (python 2.7)</td>
+</tr>
+<tr>
+<td>python3 -m http.server 80</td>
+<td>Run a basic http server, great for serving up shells etc (python > 3)</td>
 </tr>
 </tbody>
 </table>
@@ -149,8 +149,8 @@
 </thead>
 <tbody>
 <tr>
-<td>nc -v 192.168.1.1 25<p></p>
-<p>telnet 192.168.1.1 25</p></td>
+<td>nc -v 192.168.1.1 port<p></p>
+<p>telnet 192.168.1.1 port</p></td>
 <td>Basic versioning / fingerprinting via displayed banner</td>
 </tr>
 </tbody>
@@ -225,6 +225,14 @@ grep hrSWRunName|cut -d* * -f</p>
 <td>dirbuster</td>
 <td>Configure via GUI, CLI input doesn’t work most of the time</td>
 </tr>
+<tr>
+<td>gobuster -w /usr/share/seclists/Discovery/Web-Content/raft-medium-words.txt -u url -o out.txt</td>
+<td>Run gobuster</td>
+</tr>
+<tr>
+<td>ffuf -w /usr/share/seclists/Discovery/Web-Content/raft-small-words-lowercase.txt -u url?FUZZ=something -o out.txt -fw words</td>
+<td>Run ffuf for fuzzing url parameters. Replace words with the most common amount from the output.</td>
+</tr>
 </tbody>
 </table>
 <h2>Packet Inspection</h2>
@@ -239,6 +247,10 @@ grep hrSWRunName|cut -d* * -f</p>
 <tr>
 <td>tcpdump tcp port 80 -w output.pcap -i eth0</td>
 <td>tcpdump for port 80 on interface eth0, outputs to output.pcap</td>
+</tr>
+<tr>
+<td>wireshark</td>
+<td>GUI for live packet inspection</td>
 </tr>
 </tbody>
 </table>
@@ -304,6 +316,14 @@ samrdump.py SNMP 192.168.X.XXX</td>
 <td>/usr/share/wordlists</td>
 <td>Kali word lists</td>
 </tr>
+<tr>
+<td>/usr/share/wordlists/rockyou.txt</td>
+<td>Kali rockyou.txt wordlist location.</td>
+</tr>
+<tr>
+<td>/usr/share/seclists</td>
+<td>Kali seclists location.</td>
+</tr>
 </tbody>
 </table>
 <p>Massive wordlist here at <a href="https://www.hacktoday.com/password-cracking-dictionarys-download-for-free/" target="_blank">HackToday’s blog</a></p>
@@ -319,9 +339,9 @@ samrdump.py SNMP 192.168.X.XXX</td>
 </thead>
 <tbody>
 <tr>
-<td>hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f<br>
+<td>hydra -l USERNAME -P /usr/share/wordlists/rockyou.txt -f<br>
 192.168.X.XXX ftp -V</td>
-<td>Hydra FTP brute force</td>
+<td>Hydra FTP brute force. Use -L instead of -l for user list and -p instead of -P for one one password</td>
 </tr>
 </tbody>
 </table>
@@ -335,9 +355,9 @@ samrdump.py SNMP 192.168.X.XXX</td>
 </thead>
 <tbody>
 <tr>
-<td>hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f<br>
+<td>hydra -l USERNAME -P /usr/share/wordlists/rockyou.txt -f<br>
 192.168.X.XXX pop3 -V</td>
-<td>Hydra POP3 brute force</td>
+<td>Hydra POP3 brute force. Use -L instead of -l for user list and -p instead of -P for one one password</td>
 </tr>
 </tbody>
 </table>
@@ -351,8 +371,8 @@ samrdump.py SNMP 192.168.X.XXX</td>
 </thead>
 <tbody>
 <tr>
-<td>hydra -P /usr/share/wordlistsnmap.lst 192.168.X.XXX smtp -V</td>
-<td>Hydra SMTP brute force</td>
+<td>hydra -l username -P /usr/share/wordlists/rockyou.txt 192.168.X.XXX smtp -V</td>
+<td>Hydra SMTP brute force. Use -L instead of -l for user list and -p instead of -P for one one password</td>
 </tr>
 </tbody>
 </table>
@@ -782,19 +802,19 @@ ms09_050_smb2_negotiate_func_index</td>
 <tbody>
 <tr>
 <td>Windows</td>
-<td>128</td>
+<td>aprox. 128</td>
 </tr>
 <tr>
 <td>Linux</td>
-<td>64</td>
+<td>aprox. 64</td>
 </tr>
 <tr>
 <td>Solaris</td>
-<td>255</td>
+<td>aprox. 255</td>
 </tr>
 <tr>
 <td>Cisco / Network</td>
-<td>255</td>
+<td>aprox. 255</td>
 </tr>
 </tbody>
 </table>
@@ -1629,6 +1649,11 @@ and use a random user agent + database dump</td>
 <td>sqlmap -o -u “http://meh/vuln-form” –forms<br>
 -D database-name -T users –dump</td>
 <td>sqlmap dump and crack hashes for table users on database-name.</td>
+</tr>
+ <tr>
+<td>sqlmap -r file<br>
+-D database-name -T users –dump</td>
+<td>sqlmap dump and crack hashes for table users on database-name using a file with an http request inside. Can be saved from burpsuite</td>
 </tr>
 </tbody>
 </table>
