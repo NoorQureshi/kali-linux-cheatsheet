@@ -2,159 +2,158 @@
 
 Welcome to the Penetration Testing Cheat Sheet! This comprehensive guide provides quick references, commands, and techniques for various aspects of penetration testing. Whether you're a beginner or an experienced pentester, this cheat sheet has got you covered.
 
-## :mag: Recon and Enumeration
+## Recon and Enumeration
 
 Explore tools and methods for reconnaissance and enumeration to gather valuable information about your target.
 
-- [NMAP Commands](#nmap-commands): Essential NMAP commands for network scanning.
-- [SMB Enumeration](#smb-enumeration): Techniques to enumerate SMB shares and users.
-- [Other Host Discovery Methods](#other-host-discovery-methods): Discover hosts using alternate methods.
+- [NMAP Commands](#nmap-commands)
+- [SMB Enumeration](#smb-enumeration)
+- [Other Host Discovery Methods](#other-host-discovery-methods)
 
-## :snake: Python Local Web Server
+## Python Local Web Server
 
 Set up a Python local web server for various purposes, including hosting payloads and files.
 
-- [Python Local Web Server](#python-local-web-server): Steps to create a Python web server.
+- [Python Local Web Server](#python-local-web-server)
 
-## :file_folder: Mounting File Shares
+## Mounting File Shares
 
 Learn how to mount file shares for easy access and interaction.
 
-- [Mounting File Shares](#mounting-file-shares): Commands to mount remote file shares.
+- [Mounting File Shares](#mounting-file-shares)
 
-## :mag_right: Basic FingerPrinting
+## Basic FingerPrinting
 
 Understand basic fingerprinting techniques to gather information about target systems.
 
-- [Basic FingerPrinting](#basic-fingerprinting): Common fingerprinting commands.
+- [Basic FingerPrinting](#basic-fingerprinting)
 
-## :satellite: SNMP Enumeration
+## SNMP Enumeration
 
 Discover SNMP services and gather information using SNMP enumeration.
 
-- [SNMP Enumeration](#snmp-enumeration): Steps to enumerate SNMP information.
+- [SNMP Enumeration](#snmp-enumeration)
 
-## :globe_with_meridians: DNS Zone Transfers
+## DNS Zone Transfers
 
 Perform DNS zone transfers to gather information about DNS records.
 
-- [DNS Zone Transfers](#dns-zone-transfers): Steps to conduct DNS zone transfers.
+- [DNS Zone Transfers](#dns-zone-transfers)
 
-## :mag: DNSRecon
+## DNSRecon
 
 Utilize DNSRecon for efficient DNS information gathering.
 
-- [DNSRecon](#dnsrecon): How to use DNSRecon for DNS enumeration.
+- [DNSRecon](#dnsrecon)
 
-## :globe_with_meridians: HTTP / HTTPS Webserver Enumeration
+## HTTP / HTTPS Webserver Enumeration
 
 Learn how to enumerate information from HTTP/HTTPS webservers.
 
-- [HTTP / HTTPS Webserver Enumeration](#http--https-webserver-enumeration): Techniques for web server enumeration.
+- [HTTP / HTTPS Webserver Enumeration](#http--https-webserver-enumeration)
 
-## :traffic_light: Packet Inspection
+## Packet Inspection
 
 Inspect network packets and analyze traffic for security assessment.
 
-- [Packet Inspection](#packet-inspection): Tools and methods for packet analysis.
+- [Packet Inspection](#packet-inspection)
 
-## :busts_in_silhouette: Username Enumeration
+## Username Enumeration
 
 Enumerate usernames through SMB and SNMP services.
 
-- [SMB User Enumeration](#smb-user-enumeration): Enumerate SMB users.
-- [SNMP User Enumeration](#snmp-user-enumeration): Enumerate SNMP community strings.
+- [SMB User Enumeration](#smb-user-enumeration)
+- [SNMP User Enumeration](#snmp-user-enumeration)
 
-## :key: Passwords
+## Passwords
 
 Explore wordlists and resources for password-related tasks.
 
-- [Wordlists](#wordlists): Commonly used wordlists for password cracking.
+- [Wordlists](#wordlists)
 
-## :lock: Brute Forcing Services
+## Brute Forcing Services
 
 Learn about Hydra and its capabilities for brute forcing various services.
 
-- [Hydra](#hydra): How to use Hydra for brute force attacks.
+- [Hydra](#hydra)
 
-## :closed_lock_with_key: Password Cracking
+## Password Cracking
 
 Explore password cracking tools and techniques.
 
-- [John The Ripper - JTR](#john-the-ripper--jtr): Overview of John The Ripper and its usage.
-- [Hashcat](#hashcat): Introduction to Hashcat for password cracking.
+- [John The Ripper - JTR](#john-the-ripper--jtr)
+- [Hashcat](#hashcat)
 
-## :telescope: Exploit Research
+## Exploit Research
 
 Discover techniques and resources for researching and identifying exploits.
 
-- [Exploit Research](#exploit-research): Tips for effective exploit research.
+- [Exploit Research](#exploit-research)
 
-## :hammer: Compiling Exploits
+## Compiling Exploits
 
 Learn how to identify and compile exploits for various systems.
 
-- [Identifying if C code is for Windows or Linux](#identifying-if-c-code-is-for-windows-or-linux): Differentiating Windows and Linux exploits.
-- [Build Exploit GCC](#build-exploit-gcc): Compiling exploits using GCC.
-- [GCC Compile 32Bit Exploit on 64Bit Kali](#gcc-compile-32bit-exploit-on-64bit-kali): Compiling 32-bit exploits on 64-bit Kali Linux.
-- [Compile Windows .exe on Linux](#compile-windows-exe-on-linux): Cross-compiling Windows executables on Linux.
+- [Identifying if C code is for Windows or Linux](#identifying-if-c-code-is-for-windows-or-linux)
+- [Build Exploit GCC](#build-exploit-gcc)
+- [GCC Compile 32Bit Exploit on 64Bit Kali](#gcc-compile-32bit-exploit-on-64bit-kali)
+- [Compile Windows .exe on Linux](#compile-windows-exe-on-linux)
 
-## :shell: SUID Binary
+## SUID Binary
 
 Understand SUID binaries and their role in privilege escalation.
 
-- [SUID C Shell for /bin/bash](#suid-c-shell-for-binbash): Creating SUID C shell for /bin/bash.
-- [SUID C Shell for /bin/sh](#suid-c-shell-for-binsh): Creating SUID C shell for /bin/sh.
-- [Building the SUID Shell binary](#building-the-suid-shell-binary): Compiling the SUID shell binary.
+- [SUID C Shell for /bin/bash](#suid-c-shell-for-binbash)
+- [SUID C Shell for /bin/sh](#suid-c-shell-for-binsh)
+- [Building the SUID Shell binary](#building-the-suid-shell-binary)
 
-## :computer: TTY Shells
+## TTY Shells
 
 Spawn TTY shells for various programming languages.
 
-- [Python TTY Shell Trick](#python-tty-shell-trick): Spawning a TTY shell using Python.
-- [Spawn Interactive sh shell](#spawn-interactive-sh-shell): Interactive sh shell spawning.
-- [Spawn Perl TTY Shell](#spawn-perl-tty-shell): Spawning a TTY shell using Perl.
-- [Spawn Ruby TTY Shell](#spawn-ruby-tty-shell): Spawning a TTY shell using Ruby.
-- [Spawn Lua TTY Shell](#spawn-lua-tty-shell): Spawning a TTY shell using Lua.
-- [Spawn TTY Shell from Vi](#spawn-tty-shell-from-vi): Spawning a TTY shell from Vi.
-- [Spawn TTY Shell from NMAP](#spawn-tty-shell-from-nmap): Spawning a TTY shell from NMAP.
-- [Spawn TTY Shell from awk](#spawn-tty-shell-from-awk): Spawning a TTY shell from awk.
-- [Spawn TTY Shell from socat](#spawn-tty-shell-from-socat): Spawning a TTY shell using socat.
+- [Python TTY Shell Trick](#python-tty-shell-trick)
+- [Spawn Interactive sh shell](#spawn-interactive-sh-shell)
+- [Spawn Perl TTY Shell](#spawn-perl-tty-shell)
+- [Spawn Ruby TTY Shell](#spawn-ruby-tty-shell)
+- [Spawn Lua TTY Shell](#spawn-lua-tty-shell)
+- [Spawn TTY Shell from Vi](#spawn-tty-shell-from-vi)
+- [Spawn TTY Shell from NMAP](#spawn-tty-shell-from-nmap)
+- [Spawn TTY Shell from awk](#spawn-tty-shell-from-awk)
+- [Spawn TTY Shell from socat](#spawn-tty-shell-from-socat)
 
-## :space_invader: Metasploit
+## Metasploit
 
 Explore Metasploit and its functionalities.
 
-- [Meterpreter Payloads](#meterpreter-payloads): Different Meterpreter payload options.
-- [Meterpreter Cheat Sheet](#meterpreter-cheat-sheet): Handy Meterpreter commands.
-- [Common Metasploit Modules](#common-metasploit-modules): Frequently used Metasploit modules.
+- [Meterpreter Payloads](#meterpreter-payloads)
+- [Meterpreter Cheat Sheet](#meterpreter-cheat-sheet)
+- [Common Metasploit Modules](#common-metasploit-modules)
 
-## :earth_americas: Networking
+## Networking
 
 Understand networking concepts for penetration testing.
 
-- [TTL Fingerprinting](#ttl-fingerprinting): Using TTL values for OS fingerprinting.
+- [TTL Fingerprinting](#ttl-fingerprinting)
 
-## :1234: IPv4
+## IPv4
 
 Learn about IPv4 addressing and subnets.
 
-- [Classful IP Ranges](#classful-ip-ranges): Classful IP address ranges.
-- [IPv4 Private Address Ranges](#ipv4-private-address-ranges): Private IPv4 address ranges.
-- [IPv4 Subnet Cheat Sheet](#ipv4-subnet-cheat-sheet): IPv4 subnetting reference.
+- [Classful IP Ranges](#classful-ip-ranges)
+- [IPv4 Private Address Ranges](#ipv4-private-address-ranges)
+- [IPv4 Subnet Cheat Sheet](#ipv4-subnet-cheat-sheet)
 
-## :abacus: ASCII Table Cheat Sheet
+## ASCII Table Cheat Sheet
 
 Quickly reference ASCII values and characters.
 
-- [ASCII Table Cheat Sheet](#ascii-table-cheat-sheet): ASCII character reference.
+- [ASCII Table Cheat Sheet](#ascii-table-cheat-sheet)
 
-## :gear: Cisco IOS Commands
+## Cisco IOS Commands
 
 Explore common Cisco IOS commands for network assessment.
 
-- [Cisco IOS Commands](#cisco-ios-commands): Useful commands for Cisco networking devices.
-
+- [Cisco IOS Commands](#cisco-ios-commands)
 
 ---
 
