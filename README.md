@@ -311,7 +311,6 @@ DNSRecon provides the ability to perform various DNS enumeration tasks.
 | `/usr/share/wordlists` | Kali word lists |
 | `wget https://github.com/danielmiessler/SecLists/blob/master/Passwords/Common-Credentials/10-million-password-list-top-1000000.txt` | Download a popular wordlist from GitHub |
 
-[Massive wordlist here at HackToday’s blog](https://www.hacktoday.com/password-cracking-dictionarys-download-for-free/)
 
 ## 🛠️ Brute Forcing Services
 
