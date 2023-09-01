@@ -1,8 +1,8 @@
-# Penetration Testing Cheat Sheet
+# Penetration Testing Cheat Sheet 🕵️‍♂️
 
 Welcome to the Penetration Testing Cheat Sheet! This comprehensive guide provides quick references, commands, and techniques for various aspects of penetration testing. Whether you're a beginner or an experienced pentester, this cheat sheet has got you covered.
 
-## Recon and Enumeration
+## :mag: Recon and Enumeration
 
 Explore tools and methods for reconnaissance and enumeration to gather valuable information about your target.
 
@@ -10,87 +10,87 @@ Explore tools and methods for reconnaissance and enumeration to gather valuable 
 - [SMB Enumeration](#smb-enumeration)
 - [Other Host Discovery Methods](#other-host-discovery-methods)
 
-## Python Local Web Server
+## :computer: Python Local Web Server
 
 Set up a Python local web server for various purposes, including hosting payloads and files.
 
 - [Python Local Web Server](#python-local-web-server)
 
-## Mounting File Shares
+## :file_folder: Mounting File Shares
 
 Learn how to mount file shares for easy access and interaction.
 
 - [Mounting File Shares](#mounting-file-shares)
 
-## Basic FingerPrinting
+## :point_right: Basic FingerPrinting
 
 Understand basic fingerprinting techniques to gather information about target systems.
 
 - [Basic FingerPrinting](#basic-fingerprinting)
 
-## SNMP Enumeration
+## :satellite: SNMP Enumeration
 
 Discover SNMP services and gather information using SNMP enumeration.
 
 - [SNMP Enumeration](#snmp-enumeration)
 
-## DNS Zone Transfers
+## :globe_with_meridians: DNS Zone Transfers
 
 Perform DNS zone transfers to gather information about DNS records.
 
 - [DNS Zone Transfers](#dns-zone-transfers)
 
-## DNSRecon
+## :mag_right: DNSRecon
 
 Utilize DNSRecon for efficient DNS information gathering.
 
 - [DNSRecon](#dnsrecon)
 
-## HTTP / HTTPS Webserver Enumeration
+## :globe_with_meridians: HTTP / HTTPS Webserver Enumeration
 
 Learn how to enumerate information from HTTP/HTTPS webservers.
 
 - [HTTP / HTTPS Webserver Enumeration](#http--https-webserver-enumeration)
 
-## Packet Inspection
+## :traffic_light: Packet Inspection
 
 Inspect network packets and analyze traffic for security assessment.
 
 - [Packet Inspection](#packet-inspection)
 
-## Username Enumeration
+## :busts_in_silhouette: Username Enumeration
 
 Enumerate usernames through SMB and SNMP services.
 
 - [SMB User Enumeration](#smb-user-enumeration)
 - [SNMP User Enumeration](#snmp-user-enumeration)
 
-## Passwords
+## :key: Passwords
 
 Explore wordlists and resources for password-related tasks.
 
 - [Wordlists](#wordlists)
 
-## Brute Forcing Services
+## :shield: Brute Forcing Services
 
 Learn about Hydra and its capabilities for brute forcing various services.
 
 - [Hydra](#hydra)
 
-## Password Cracking
+## :lock: Password Cracking
 
 Explore password cracking tools and techniques.
 
 - [John The Ripper - JTR](#john-the-ripper--jtr)
 - [Hashcat](#hashcat)
 
-## Exploit Research
+## :mag_right: Exploit Research
 
 Discover techniques and resources for researching and identifying exploits.
 
 - [Exploit Research](#exploit-research)
 
-## Compiling Exploits
+## :wrench: Compiling Exploits
 
 Learn how to identify and compile exploits for various systems.
 
@@ -99,7 +99,7 @@ Learn how to identify and compile exploits for various systems.
 - [GCC Compile 32Bit Exploit on 64Bit Kali](#gcc-compile-32bit-exploit-on-64bit-kali)
 - [Compile Windows .exe on Linux](#compile-windows-exe-on-linux)
 
-## SUID Binary
+## :key: SUID Binary
 
 Understand SUID binaries and their role in privilege escalation.
 
@@ -107,7 +107,7 @@ Understand SUID binaries and their role in privilege escalation.
 - [SUID C Shell for /bin/sh](#suid-c-shell-for-binsh)
 - [Building the SUID Shell binary](#building-the-suid-shell-binary)
 
-## TTY Shells
+## :shell: TTY Shells
 
 Spawn TTY shells for various programming languages.
 
@@ -121,7 +121,7 @@ Spawn TTY shells for various programming languages.
 - [Spawn TTY Shell from awk](#spawn-tty-shell-from-awk)
 - [Spawn TTY Shell from socat](#spawn-tty-shell-from-socat)
 
-## Metasploit
+## :space_invader: Metasploit
 
 Explore Metasploit and its functionalities.
 
@@ -129,13 +129,13 @@ Explore Metasploit and its functionalities.
 - [Meterpreter Cheat Sheet](#meterpreter-cheat-sheet)
 - [Common Metasploit Modules](#common-metasploit-modules)
 
-## Networking
+## :repeat: Networking
 
 Understand networking concepts for penetration testing.
 
 - [TTL Fingerprinting](#ttl-fingerprinting)
 
-## IPv4
+## :globe_with_meridians: IPv4
 
 Learn about IPv4 addressing and subnets.
 
@@ -143,17 +143,18 @@ Learn about IPv4 addressing and subnets.
 - [IPv4 Private Address Ranges](#ipv4-private-address-ranges)
 - [IPv4 Subnet Cheat Sheet](#ipv4-subnet-cheat-sheet)
 
-## ASCII Table Cheat Sheet
+## :1234: ASCII Table Cheat Sheet
 
 Quickly reference ASCII values and characters.
 
 - [ASCII Table Cheat Sheet](#ascii-table-cheat-sheet)
 
-## Cisco IOS Commands
+## :satellite: Cisco IOS Commands
 
 Explore common Cisco IOS commands for network assessment.
 
 - [Cisco IOS Commands](#cisco-ios-commands)
+
 
 ---
 
