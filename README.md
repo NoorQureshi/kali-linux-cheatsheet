@@ -1,26 +1,9 @@
-# Penetration Testing Cheat Sheet 🕵️‍♂️
 
-Welcome to the Penetration Testing Cheat Sheet! This comprehensive guide provides quick references, commands, and techniques for various aspects of penetration testing. Whether you're a beginner or an experienced pentester, this cheat sheet has got you covered.
-
-## :mag: Recon and Enumeration
 
 Explore tools and methods for reconnaissance and enumeration to gather valuable information about your target.
 
 - [NMAP Commands](#nmap-commands)
-- [SMB Enumeration](#smb-enumeration)
-- [Other Host Discovery Methods](#other-host-discovery-methods)
-
-## :computer: Python Local Web Server
-
-Set up a Python local web server for various purposes, including hosting payloads and files.
-
-- [Python Local Web Server](#python-local-web-server)
-
-## :file_folder: Mounting File Shares
-
-Learn how to mount file shares for easy access and interaction.
-
-- [Mounting File Shares](#mounting-file-shares)
+- [SMB En
 
 ## :point_right: Basic FingerPrinting
 
@@ -50,7 +33,7 @@ Utilize DNSRecon for efficient DNS information gathering.
 
 Learn how to enumerate information from HTTP/HTTPS webservers.
 
-- [HTTP / HTTPS Webserver Enumeration](#http--https-webserver-enumeration)
+- [HTTP / HTTPS Webserver Enumeration](#http--https-webserver-enumeration
 
 ## :traffic_light: Packet Inspection
 
